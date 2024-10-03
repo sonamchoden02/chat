@@ -51,7 +51,7 @@ window.addEventListener('message', function(event) {
     } else if (event.data.mode === 'light') {
         document.body.classList.remove('dark-mode');
         if (nightModeBtn) {
-            nightModeBtn.src = '../img/darkzone.svg';  // Switch to darkzone icon
+            nightModeBtn.src = 'img/darkzone.svg';  // Switch to darkzone icon
         }
     }
 });
