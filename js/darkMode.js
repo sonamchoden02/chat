@@ -22,7 +22,7 @@ if (nightModeBtn) {
         document.body.classList.toggle('dark-mode');
 
         if (document.body.classList.contains('dark-mode')) {
-            nightModeBtn.src = '../img/lightzone.svg';  // Path to lightzone icon
+            nightModeBtn.src = 'img/lightzone.svg';  // Path to lightzone icon
             localStorage.setItem('darkMode', 'enabled');
 
             // Inform the parent page to switch to dark mode
