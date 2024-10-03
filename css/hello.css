@@ -1,0 +1,403 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    
+}
+/* Custom Scrollbars for Body */
+body::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: white; /* Background color of the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #b9beba; /* Color of the scrollbar handle */
+    border-radius: 4px; /* Rounded corners for the handle */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #b9beba; /* Color of the scrollbar handle on hover */
+}
+
+
+/* Style the circular checkbox */
+.terms input[type="checkbox"] {
+    appearance: none; /* Remove default checkbox styling */
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff; /* White border for the checkbox */
+    border-radius: 50%; /* Make it circular */
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px; /* Adjusted margin for proper spacing */
+    background-color: transparent; /* Initially transparent */
+}
+
+.terms input[type="checkbox"]:checked {
+    background-color: #FF086B; /* Color when checked */
+    border: none;
+}
+
+.terms input[type="checkbox"]::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.2s ease; /* Smooth transition */
+}
+
+.terms input[type="checkbox"]:checked::before {
+    opacity: 1; /* Show the inner circle when checked */
+}
+
+.header {
+    background: linear-gradient(90deg, #FF571E 0%, #FF086B 100%);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Adjust the logo size for responsive behavior */
+.logo {
+    width: 100px; /* Default width */
+    height: auto;
+    position: absolute;
+    left: 60px;
+    top: 25px;
+    transform: translateY(-50%);
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 17px;
+    top: 25px;
+    transform: translateY(-50%);
+}
+
+.nightmode {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    left: 305px;
+    top: 25px;
+    transform: translateY(-50%);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #101521; /* Main background color */
+    color: #fff; /* Main text color */
+}
+
+.dark-mode .header {
+    background: linear-gradient(90deg, #62052A 0%, #161E31 100%); /* Darker header */
+}
+
+.dark-mode .help-text {
+    color: #fff;
+}
+
+.dark-mode .suggestion-btn-container .btn-text{
+    color: #FFFFFF; /* Make button text white in dark mode */
+
+}
+
+.dark-mode .btn-border{
+    border-radius: 16px;
+    border: 1px solid #B6B6B6;
+}
+
+.dark-mode .input-container {
+    background-color: #101521; /* Darker input background */
+    color: #fff; /* White text */
+}
+.dark-mode .input-box{
+    background-color: #101521; /* Darker input background */
+    color: #fff; /* White text */
+    
+}
+.dark-mode .input-field {
+    background-color: #101521;
+    color: #fff; /* white text in dak mode */
+}
+
+input[type="checkbox"] {
+    transform: scale(0.7); /* Adjust the scale value to make it smaller */
+    right: 6px;
+    
+}
+
+/* Container to wrap both Suggested text and buttons */
+.suggestion-container {
+    position: absolute;
+    bottom: 60px; /* Space for the input box */
+    left: 0;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+/* Suggestion Section */
+.suggestion {
+    color: #FF086B;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    position: relative;
+    left: 16px;
+}
+
+/* Suggestion Buttons */
+.suggestion-btn {
+    height: 25px;
+    color: #161E31;
+    cursor: pointer;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Container for buttons */
+.suggestion-btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 10px;
+    font-family: 'Inter', sans-serif;
+    height: -20px;
+   
+}
+
+/* Specific Button Styles with Auto Width */
+.suggestion-btn:nth-child(1) { /* Programmes */
+    width: auto; /* Let width adjust based on content */
+    min-width: 90px; /* Set a minimum width */
+}
+
+.suggestion-btn:nth-child(2) { /* Enrolment Process */
+    width: auto;
+    min-width: 120px;
+}
+
+.suggestion-btn:nth-child(3) { /* About Us */
+    width: auto;
+    min-width: 80px;
+}
+
+.suggestion-btn:nth-child(4) { /* Programme Duration */
+    width: auto;
+    min-width: 140px;
+}
+
+.suggestion-btn:nth-child(5) { /* Know Bhutan */
+    width: auto;
+    min-width: 100px;
+}
+
+.btn-background {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 16px;
+}
+
+.btn-border {
+    border: 1px solid #161E31;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-text {
+    color: #161E31;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* Input Container */
+.input-container {
+    width: 95%;
+    max-width: 350px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border: 1px solid #FF086B;
+    border-radius: 10px;
+    margin-top: 248px;
+    background-color:  #FFEEF5;
+
+    
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 12px;
+    max-height: 80px;
+    overflow-y: auto;
+    font-family: 'Inter', sans-serif;
+    background-color:  #FFEEF5;
+}
+
+/* Custom Scrollbars */
+.input-field::-webkit-scrollbar {
+    width: 5px; /* Adjust width of the scrollbar */
+}
+
+.input-field::-webkit-scrollbar-track {
+    background: #ffffff; /* Background color of the scrollbar track */
+}
+
+.input-field::-webkit-scrollbar-thumb {
+    background: #b9beba; /* Color of the scrollbar handle */
+    border-radius: 4px; /* Rounded corners for the handle */
+}
+
+.input-field::-webkit-scrollbar-thumb:hover {
+    background: #b9beba; /* Color of the scrollbar handle on hover */
+}
+
+.line-divider {
+    height: 24px;
+    width: 1px;
+    background-color: #FF086B;
+    margin: 0 10px;
+}
+
+.send-btn, .icon-btn {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.send-btn img, .icon-btn img {
+    height: 18px;
+    width: 18px;
+}
+
+.help-text {
+    color: #161E31;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    top: 110px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    position: relative;
+}
+
+/* Center and reduce kuzu and emoji sizes */
+.kuzu {
+    width: 65%;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+.emoji {
+    width: 35%;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .header {
+        height: 50px;
+    }
+
+    .input-box {
+        margin-top: 264px;
+    }
+ }
+ 
+ @media (max-width: 480px) {
+    .header {
+        height: 50px;
+    }
+ 
+ }
+ 
+ /* Responsive Styles for 320x545 */
+ @media (max-width: 320px) {
+  
+     .header {
+         height: 43px;
+     }
+ 
+     .logo{
+         width: 70px;
+     }
+ 
+     .nightmode {
+         margin-left: -3rem;
+         top: 21px;
+     }
+
+     .suggestion-container {
+        margin-bottom: -72px;
+     }
+
+     .input-box {
+        margin-top: 272px;
+     }
+  }
+
+/* @media (max-width: 425px) {
+    .suggestion-container {
+        margin-bottom: -96px;
+    }
+} */
+  
+ 
