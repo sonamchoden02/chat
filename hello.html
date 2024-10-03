@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/hello.css">
+    <title>landing</title>
+</head>
+<body>
+    <div class="background-box"></div>
+    <div class="header"></div>
+    <img class="logo" src="img/Sparklogo.svg" alt="Logo" />
+    <img class="icon" src="img/star.svg" alt="Icon" />
+    <img class="nightmode" src="img/darkzone.svg" alt="nightmode">
+
+    <img class="kuzu" src="img/Kuzu.svg" alt="Large Image"/>
+    <img class="emoji" src="img/emologo.svg" alt="Medium Image" />
+    <div class="help-text">Hi, I'm Kuzu. <br> How can I help you today?</div>
+
+    <div class="suggestion-container">
+        <div class="suggestion">Suggested</div>
+        <div class="suggestion-btn-container">
+          <div class="suggestion-btn">
+              <div class="btn-background">
+                  <div class="btn-border">
+                      <div class="btn-text">Programmes</div>
+                  </div>
+              </div>
+          </div>
+          <div class="suggestion-btn">
+              <div class="btn-background">
+                  <div class="btn-border">
+                      <div class="btn-text">Enrolment Process</div>
+                  </div>
+              </div>
+          </div>
+          <div class="suggestion-btn">
+              <div class="btn-background">
+                  <div class="btn-border">
+                      <div class="btn-text">About Us</div>
+                  </div>
+              </div>
+          </div>
+          <div class="suggestion-btn">
+              <div class="btn-background">
+                  <div class="btn-border">
+                      <div class="btn-text">Programme Duration</div>
+                  </div>
+              </div>
+          </div>
+          <div class="suggestion-btn">
+              <div class="btn-background">
+                  <div class="btn-border">
+                      <div class="btn-text">Know Bhutan</div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+ 
+    
+      <div class="input-container">
+        <div class="input-box">
+            <textarea id="dynamicInput" class="input-field" placeholder="Type here..." rows="1"></textarea>
+            <div class="line-divider"></div>
+            <div class="send-btn">
+                <img class="send-icon" src="img/refresh.svg" alt="Send Icon" />
+            </div>
+            <div class="icon-btn">
+                <img class="attachment-icon" src="img/sent.svg" alt="Attachment Icon" />
+            </div>
+        </div>
+    </div>
+        
+  
+
+<script>
+    document.getElementById("privateChatBtn").addEventListener("click", function() {
+        window.location.href = "hello.html"; // Redirects to hello.html
+    });
+</script>
+    <script src="js/inputbox.js"></script>
+    <script src="js/darkMode.js"></script> 
+</body>
+</html>
